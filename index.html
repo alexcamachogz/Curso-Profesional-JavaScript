@@ -1,9 +1,10 @@
 <html>
 
 <head>
-	<title>PlatziMediaPlayer.js</title>
+	<title>Platzi Media Player</title>
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 	<link rel="stylesheet" href="./assets/index.css" />
+	<link rel="shortcut icon" href="./assets/favicon.ico?" type="image/x-icon">
 </head>
 
 <body>
@@ -17,8 +18,32 @@
 			<source src="./assets/ejercicio.mp4" />
 		</video>
 
-		<button>Play/Pause</button>
+		<button> ▶ </button>
 	</main>
+
+	<script>
+		const video = document.querySelector("video");
+		const button = document.querySelector("button");
+
+		function MediaPlayer(config) {
+			this.media = config.media
+		}
+
+		MediaPlayer.prototype.play = function () {
+			if(this.media.paused === true) {
+				this.media.play();
+				button.innerHTML = ' <strong>||</strong>  ';
+			} else {
+				this.media.pause();
+				button.innerHTML = ' ▶ ';
+			}
+		}
+
+		const player = new MediaPlayer({ media: video });
+
+		button.onclick = () => player.play();
+
+	</script>
 </body>
 
 </html>
