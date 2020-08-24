@@ -1,0 +1,17 @@
+{
+	"name": "platiz-media-player",
+	"version": "1.0.0",
+	"description": "Project from JavaScript School in Platzi",
+	"scripts": {
+		"start": "live-server"
+	},
+	"keywords": [
+		"platzi",
+		"mediaplayer"
+	],
+	"author": "Alejandra Camacho <alexcamachogz>",
+	"license": "MIT",
+	"devDependencies": {
+		"live-server": "^1.2.1"
+	}
+}
